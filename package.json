@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.3.1",
+    "apollo-server": "^2.4.8",
     "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "nedb-promise": "^2.0.1",
+    "ramda": "^0.26.1",
     "react": "^16.8.4",
     "react-apollo": "^2.5.2",
     "react-dom": "^16.8.4",
@@ -14,7 +18,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server:start": "NODE_ENV=development nodemon server",
+    "server:start:slow": "NODE_ENV=development nodemon server 1400",
+    "server:seed": "NODE_ENV=development node server/models/seed.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
 }
