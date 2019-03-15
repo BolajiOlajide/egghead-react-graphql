@@ -126,3 +126,7 @@ input[type="submit"][disabled]:hover {
   background-color: #4d9cff;
   border: 1px solid #448ae2;
 }
+
+.star-btn {
+  font-size: 1.5rem;
+}
