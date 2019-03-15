@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider, ApolloConsumer } from 'react-apollo';
 import Recipes from './Recipes';
+import AddRecipe from './AddRecipe';
 
 
 const client = new ApolloClient({
@@ -44,6 +45,7 @@ class App extends Component {
             }
           }
         </ApolloConsumer> */}
+        <AddRecipe />
         <Recipes />
       </ApolloProvider>
     );

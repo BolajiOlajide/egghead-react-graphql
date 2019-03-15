@@ -1,19 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
+import { recipesQuery } from './recipesQuery';
 
-
-const recipesQuery = gql`
-    query recipes($vegetarian: Boolean!) {
-        recipes(vegetarian: $vegetarian) {
-            id
-            title
-        }
-    }
-`;
 
 export default class Recipes extends Component {
     state = {
+        title: '',
         vegetarian: false
     }
 
@@ -30,6 +22,7 @@ export default class Recipes extends Component {
                         checked={this.state.vegetarian}
                         onChange={this.updateVegetarianStatus}
                     />
+                    <span>vegetarian</span>
                 </label>
                 <Query
                     query={recipesQuery}
